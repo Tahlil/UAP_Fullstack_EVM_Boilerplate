@@ -55,7 +55,6 @@ function Main() {
     abi: Greeter__factory.abi,
     functionName: 'greet',
   })
-  console.log(data)
 
   const { address, isConnected, connector } = useAccount({
     async onConnect({ address, connector, isReconnected }) {

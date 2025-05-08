@@ -41,7 +41,7 @@ yarn
 
 ## Instruction
 - Install a wallet like [Metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
-- Copy `.env.example` to `.env`
+- Copy `.env.example` to `.env` (both on the root path and the `frontend` folder)
   * Mac or Linux
     * ```cp .env.example .env```
   * Windows
@@ -77,3 +77,7 @@ For example for `Greeter` contract:
 npx hardhat verify --network sepolia 0xAECD7dFD9d5ED08EA916B052D90A75366B963A61 "Hello world"
 ```
 
+### Run frontend 
+```
+yarn dev
+```

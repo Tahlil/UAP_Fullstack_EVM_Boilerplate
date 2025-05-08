@@ -1,9 +1,8 @@
 'use client'
 
-import { BaseError } from 'viem'
 import { useContractWrite, useWaitForTransaction, usePrepareContractWrite } from 'wagmi'
 import { Greeter__factory } from '../../typechain'
-import { stringify } from '../utils/stringify'
+
 
 import contractDetails from '../info/contractDetails.json'
 import { useState } from 'react'
