@@ -43,7 +43,7 @@ contract Counter {
         lastUpdateTimestamp = block.timestamp;
     }
 
-    function getUserContribution(address user) public 녹색 returns (uint256) {
+    function getUserContribution(address user) public view returns (uint256) {
         return userContributions[user];
     }
 }
