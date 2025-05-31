@@ -1,3 +1,4 @@
+
 pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 import "../src/Counter.sol";
@@ -49,9 +50,10 @@ contract CounterTest is Test {
     }
 
     function testResetByOwner() public {
-        vm.prank(owner); // Ensure owner is calling reset
+        vm.startPrank(owner); // Start prank for all calls
         counter.setNumber(100);
         counter.reset();
+        vm.stopPrank(); // Stop prank
         assertEq(counter.number(), 0);
     }
 
@@ -91,6 +93,6 @@ contract CounterTest is Test {
         counter.increment();
         counter.setNumber(y);
         assertEq(counter.number(), y);
-        assertEq(counter.userContributions(address(this)), x + 2); // x from setNumber + 1 from decrement + 1 from increment
+        assertEq(counter.userContributions(address(this)), y); // Final setNumber(y) sets userContributions to y
     }
 }
